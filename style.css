@@ -1,0 +1,324 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        #6d4c41 0px,
+        #6d4c41 25px,
+        #795548 25px,
+        #795548 50px
+    );
+
+}
+
+/* Book */
+
+.book{
+
+    position:relative;
+
+    width:900px;
+    height:600px;
+
+    display:flex;
+
+    background:#d9c9a5;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.5);
+
+}
+
+/* Pages */
+
+.page{
+
+    width:50%;
+    height:100%;
+
+    padding:40px;
+
+    background:
+
+    linear-gradient(
+        white,
+        #fffef7
+    );
+
+    position:relative;
+
+}
+
+/* Left Page */
+
+.left-page{
+
+    border-right:1px solid #d5d5d5;
+
+}
+
+/* Right Page */
+
+.right-page{
+
+    border-left:1px solid #d5d5d5;
+
+}
+
+/* Center Fold */
+
+.center-line{
+
+    width:12px;
+
+    background:
+
+    linear-gradient(
+        to right,
+        #8d6e63,
+        #bca38c,
+        #8d6e63
+    );
+
+}
+
+/* Heading */
+
+h1{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:48px;
+
+    color:#5d4037;
+
+    margin-bottom:15px;
+
+}
+
+/* Date */
+
+.date{
+
+    color:#777;
+
+    margin-bottom:25px;
+
+    font-size:15px;
+
+}
+
+/* Quote */
+
+.quote{
+
+    font-style:italic;
+
+    color:#795548;
+
+    margin-bottom:25px;
+
+}
+
+/* Writing Lines */
+
+.writing-lines{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* Single Line */
+
+.line{
+
+    border-bottom:1px solid #c5c5c5;
+
+}
+
+/* Right Heading */
+
+h2{
+
+    color:#5d4037;
+
+    margin-bottom:25px;
+
+}
+
+/* Content */
+
+.content{
+
+    line-height:2;
+
+    color:#444;
+
+    text-align:justify;
+
+}
+
+/* Signature */
+
+.signature{
+
+    position:absolute;
+
+    bottom:40px;
+
+    right:40px;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:28px;
+
+    color:#795548;
+
+}
+
+/* Bookmark */
+
+.bookmark{
+
+    position:absolute;
+
+    top:0;
+
+    right:120px;
+
+    width:35px;
+
+    height:150px;
+
+    background:#c62828;
+
+    z-index:10;
+
+}
+
+.bookmark::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-20px;
+
+    left:0;
+
+    border-left:17px solid transparent;
+    border-right:18px solid transparent;
+    border-top:20px solid #c62828;
+
+}
+
+/* Hover Effect */
+
+.book:hover{
+
+    transform:scale(1.02);
+
+    transition:.4s;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.book{
+
+    width:95%;
+
+    height:auto;
+
+    flex-direction:column;
+
+}
+
+.page{
+
+    width:100%;
+
+}
+
+.center-line{
+
+    display:none;
+
+}
+
+.left-page{
+
+    border-right:none;
+
+}
+
+.right-page{
+
+    border-left:none;
+
+}
+}
+
+h1:hover{
+    background-color:pink;
+    cursor: pointer;
+}
+
+p:hover{
+    background-color: lightyellow;
+}
+.hand-pencil{
+
+    position:absolute;
+
+    width:160px;
+
+    right:-180px;
+
+    bottom:50px;
+
+    opacity:0;
+
+    transition:.5s ease;
+
+    pointer-events:none;
+
+}
+
+.left-page:hover .hand-pencil{
+
+    right:20px;
+
+    opacity:1;
+
+}
+
+
